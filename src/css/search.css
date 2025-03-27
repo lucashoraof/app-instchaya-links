@@ -1,0 +1,60 @@
+/* Campo de Busca */
+.search-container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  animation: fadeInRight 0.2s ease-out 0.2s backwards;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  background: linear-gradient(145deg, var(--button-color), var(--button-hover));
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  color: var(--text-color-primary);
+  font-size: 0.875rem;
+  transition: all var(--transition-speed);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(255, 255, 255, 0.05) inset;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-placeholder);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.search-input:focus {
+  outline: none;
+  background: linear-gradient(145deg, var(--button-hover), var(--button-color));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(255, 255, 255, 0.1) inset, 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+.search-input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.search-input::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: all 0.5s ease;
+}
+
+.search-input:hover::before {
+  left: 100%;
+}

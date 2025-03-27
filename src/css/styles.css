@@ -1,0 +1,81 @@
+:root {
+  --font-family: 'Inter', sans-serif;
+  --font-family-icon: 'Font Awesome 6 Free';
+  --background: #121214;
+  --text-color-primary: #ededed;
+  --text-color-secondary: #9ca3af;
+  --color-placeholder: #9ca3af50;
+  --border-color: #323238;
+  --button-color: #202024;
+  --button-hover: #29292e;
+  --disabled-color: #8d8d99;
+  --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --card-shadow-active: 0 3px 8px rgba(0, 0, 0, 0.15);
+  --primary-blue: #3B82F6;
+  --primary-blue-dark: #2563EB;
+  --transition-speed: 0.15s;
+}
+
+/* Reset e layout base */
+body {
+  background-color: var(--background);
+  color: var(--text-color-primary);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 220px 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+  .main-content {
+    padding-top: 250px;
+    width: calc(100% - 32px);
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .flex-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}

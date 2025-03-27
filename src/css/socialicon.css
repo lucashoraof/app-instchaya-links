@@ -1,0 +1,33 @@
+.social-icons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: center;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
+  transition: all var(--transition-speed);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  background: linear-gradient(145deg, var(--button-color), var(--button-hover));
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(255, 255, 255, 0.05) inset;
+  font-size: 1.2rem;
+}
+
+.social-icon:hover {
+  background: linear-gradient(145deg, #323238, #323238);
+}
