@@ -96,8 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     const sectionId = routeMap[currentPath] || 'home-section';
     
+    // Verifica se estamos na página inicial (rota raiz ou '/')
+    const isHomePage = currentPath === '/' || currentPath === '' || currentPath === '/index.html';
+    
     navLinks.forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === currentPath);
+      // Marca o link como ativo se corresponder à rota atual ou se for o link 'Início' e estivermos na página inicial
+      const linkHref = link.getAttribute('href');
+      const shouldBeActive = linkHref === currentPath || (isHomePage && linkHref === '/');
+      link.classList.toggle('active', shouldBeActive);
     });
     
     showSection(sectionId);
