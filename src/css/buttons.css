@@ -40,7 +40,6 @@
   color: var(--text-color-primary);
   text-decoration: none;
   transition: all var(--transition-speed);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(255, 255, 255, 0.05) inset;
   position: relative;
   overflow: hidden;
 }
@@ -59,7 +58,6 @@
   border-radius: 50%;
   padding: 6px;
   transition: all var(--transition-speed);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .button-text {
@@ -67,7 +65,6 @@
   text-align: center;
   font-weight: 500;
   letter-spacing: 0.5px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .button-spacer {

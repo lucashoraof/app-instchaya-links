@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Detectar preferência de tema do sistema do usuário
+  function detectPreferredTheme() {
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.classList.toggle('light-theme', !prefersDarkScheme);
+  }
+  detectPreferredTheme();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', detectPreferredTheme);
+
   // Inicialização da funcionalidade de busca de projetos
   const projectSearchInput = document.getElementById('project-search');
   if (projectSearchInput) {
