@@ -28,6 +28,5 @@
 }
 
 .social-icon:hover {
-  /* background: var(--button-hover); */
   background: linear-gradient(145deg, #323238, #323238);
 }
