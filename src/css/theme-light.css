@@ -62,5 +62,5 @@
 }
 
 :root.light-theme .social-icon:hover {
-  background-color: var(--button-hover);
+  background: linear-gradient(145deg, #d9d9df, #d9d9df);
 }
